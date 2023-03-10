@@ -1,11 +1,13 @@
 ---
-author: Dane Mackier
 title: How to build a Flutter Website in 2023
 description: A Guide to building and deploying a Flutter Website in 2023.
-postSlug: how-to-build-a-flutter-website-in-2023
 published: 2023-02-28
-featured: false
+updated: 2023-02-28
+postSlug: how-to-build-a-flutter-website-in-2023
+author: Dane Mackier
 ogImage: /assets/blog/tutorials/085/thumbnail.jpeg
+featured: false
+draft: false
 tags:
   - flutter web
 categories:
@@ -72,7 +74,6 @@ flutter run -d chrome
 
 Now re-size your chrome window and you'll see the UI change between desktop (the counter UI), tablet and mobile. If you open `home_view.dart` you'll see the widget responsible for this, `ScreenTypeLayout.builder`. It allows you to build different UI's based on the current screenSize defined as mobile, tablet and desktop.
 
-<br/>
 My goal is always to have scalable code, meaning me and my team have a pattern to follow to produce high quality code, consistently. The `responsive_builder` package is the only package that place focus on creating an easily understandable responsive UI, without having multiple checks and conditional logic scattered everywhere.
 
 ## Building a Landing Page
@@ -285,8 +286,6 @@ I don't like how verbose the Flutter Theme stuff is so I use constants to store 
 
 And others I make up as I need them. This makes up a constant like `kcLightGrey` which translates to "a constant of type color that is Light Grey". To get the screenshot looking better there's a only a few things we need to do.
 
-<br/>
-
 1. Set the background color
 2. Put the content in the center of the view
 3. Restrict the width of the content
@@ -317,7 +316,7 @@ return Scaffold(
 
 As for #4, we'll start off by adding google fonts.
 
-```terminal
+```shell
 flutter pub add google_fonts
 ```
 
@@ -695,8 +694,6 @@ If you're running the app make your browser window as small as it can go and you
 
 Only 3 widget responsive changes required and this UI will be ready.
 
-<br/>
-
 1. Reduce title size on mobile to avoid wrapping
 2. On Mobile use a `Column` for the subtitle instead of a `Row`
 3. Title should center the items instead of left align
@@ -796,7 +793,6 @@ class HomeTitle extends StatelessWidget {
 
 And that's literally how easy it is to do responsive UI, down to a per widget level using the `responsive_builer` package.
 
-<br/>
 The last thing to do is ensure that the tablet layout shows the desktop layout. Run the app `flutter run -d chrome` and if you change width of your browser between desktop and mobile you'll see it uses the old tablet layout on the way to mobile. To fix this we can open `home_view.dart` and remove the tablet builder.
 
 ```dart
@@ -825,8 +821,6 @@ By default `responsive_builder` prefers the mobile layout so things will look we
 
 We have a text field but we haven't hooked it up to anything. I want to give you a quick overview of how awesome forms work in Stacked:
 
-<br/>
-
 1. Tell Stacked which text values you'll be capturing
 2. Extend the generated Form Mixin
 3. Enable two way binding. This syncs the typed value to the ViewModel automatically 🔥
@@ -851,8 +845,6 @@ class HomeView extends StackedView<HomeViewModel>
 
 When you're done with this run `stacked generate` and you'll see a new file `home_view.form.dart` generated. This is where all the form code is stored. You can import that file and you should see most of the errors go away. The last thing to do is update the ViewModel, we do this by:
 
-<br/>
-
 1. Extending from a FormViewModel
 2. Using the email value as mentioned in #4 above.
 
@@ -875,8 +867,6 @@ class HomeViewModel extends FormViewModel {
 ```
 
 That's it for the form setup. The next thing to do is to wire the form into the UI. In Flutter a `TextField` or `FormField` requires a `TextEditingController` to keep track of what a user has entered. We have to set the controller where we use our `InputField` widget. This means a few updates to get it to the `InputField` widget.
-
-<br/>
 
 1. Pass the controller to the Desktop and Mobile Layouts
 2. Update desktop and mobile layouts to accept controller
@@ -1002,8 +992,6 @@ Stacked has a few extensions you can checkout in `lib/extensions/hover_extension
 ## Deploy to Firebase
 
 And the last thing to do is to deploy to firebase. This has become so much easier than it use to be. If you have the firebase tools installed do:
-
-<br/>
 
 1. Run `firebase init`
 2. Select `Hosting: Configure files for Firebase` option.

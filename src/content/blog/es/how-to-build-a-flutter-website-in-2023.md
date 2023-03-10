@@ -1,11 +1,13 @@
 ---
-author: Dane Mackier
 title: Cómo construir un sitio Web Flutter en 2023
 description: Guía para crear y desplegar un sitio Web con Flutter en 2023.
-postSlug: how-to-build-a-flutter-website-in-2023
 published: 2023-02-28
-featured: false
+updated: 2023-02-28
+postSlug: how-to-build-a-flutter-website-in-2023
+author: Dane Mackier
 ogImage: /assets/blog/tutorials/085/thumbnail.jpeg
+featured: false
+draft: false
 tags:
   - flutter web
 categories:
@@ -314,7 +316,7 @@ return Scaffold(
 
 En cuanto al #4, empezaremos añadiendo google fonts.
 
-```terminal
+```shell
 flutter pub add google_fonts
 ```
 

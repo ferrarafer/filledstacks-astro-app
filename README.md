@@ -83,4 +83,4 @@ Licensed under the MIT License, Copyright © 2023
 
 ---
 
-Made with 🤍 by [FilledStacks](https://filledstacks.com) 👨🏻‍💻
+Made with 💜 by [FilledStacks](https://filledstacks.com) 👨🏻‍💻

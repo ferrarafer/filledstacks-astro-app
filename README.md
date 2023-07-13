@@ -45,6 +45,11 @@ All blog posts are stored in `src/content/blog` directory.
 
 ## 📖 Documentation
 
+- [Configuration](https://github.com/ferrarafer/filledstacks-astro-app/wiki/Configuration)
+- [Add Author to Authors Collection](https://github.com/ferrarafer/filledstacks-astro-app/wiki/Add-Author-to-Authors-Collection)
+- [Add Snippet to Snippets Collection](https://github.com/ferrarafer/filledstacks-astro-app/wiki/Add-Snippet-to-Snippets-Collection)
+- [Add Tutorial to Tutorials Collection](https://github.com/ferrarafer/filledstacks-astro-app/wiki/Add-Tutorial-to-Tutorials-Collection)
+
 ## 💻 Tech Stack
 
 **Main Framework** - [Astro](https://astro.build/)  
